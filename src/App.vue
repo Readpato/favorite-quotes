@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import NavBar from "./components/NavBar.vue";
 // import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <h1>Empty App</h1>
+  <div
+    class="w-screen h-screen bg-gradient-to-tr from-white via-white to-blue-200"
+  >
+    <NavBar />
+  </div>
 </template>

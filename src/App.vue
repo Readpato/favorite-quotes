@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar.vue";
 
 <template>
   <div
-    class="w-screen h-screen bg-gradient-to-tr from-white via-white to-blue-200"
+    class="font-poppins w-screen h-screen bg-gradient-to-tr from-white to-blue-200 md:via-white"
   >
     <NavBar />
   </div>

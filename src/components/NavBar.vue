@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { ref } from "vue";
+
+const isModalVisible = ref(false);
+
+function toggleModal() {
+  isModalVisible.value = !isModalVisible.value;
+}
 </script>
 
 <template>
@@ -27,14 +34,17 @@ import { Icon } from "@iconify/vue";
       </ul>
 
       <div class="relative md:hidden">
-        <button class="hover:rounded hover:ring-2 hover:ring-fuchsia-500">
+        <button
+          class="hover:rounded hover:ring-2 hover:ring-fuchsia-500"
+          @click="toggleModal"
+        >
           <Icon
             class="h-9 w-9"
             icon="heroicons-solid:menu-alt-2"
             color="#d946ef"
           />
         </button>
-        <div class="absolute -bottom-18 right-0 z-10">
+        <div v-if="isModalVisible" class="absolute -bottom-18 right-0 z-10">
           <ul class="space-y-2 rounded p-2 text-base ring-2 ring-fuchsia-500">
             <li class="w-25 text-fuchsia-500 decoration-2 hover:underline">
               <a href="/">Add a quote</a>

@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
-  <div class="h-screen w-screen bg-black font-poppins">
+  <div class="h-screen w-screen bg-slate-800 font-poppins">
     <NavBar />
   </div>
 </template>
